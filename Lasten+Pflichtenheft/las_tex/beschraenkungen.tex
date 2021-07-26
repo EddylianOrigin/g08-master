@@ -1,0 +1,113 @@
+\chapter{Projektbeschränkungen}
+
+\section{Beschränkungen}
+
+\newcounter{lb}\setcounter{lb}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{lb}{LB}{beschr:lehrbots}
+		\item [Name:] Selbstlehrende Bots
+		\item [Beschreibung:] Keine Selbstlehrfunktion von Bots wird implementiert.
+		\item [Motivation:] Die Funktionalität ist zu aufwändig zu implementieren und passt deshalb nicht in das Zeitbudget.
+		\item [Erfüllungskriterium:] Intelligenzalgorithmus von Bots ist so vorprogrammiert, dass sie Entscheidungen nur anhand des vorprogrammierten Wissens sowie des aktuellen Spielstands treffen, ohne dabei frühere Spiele zu berücksichtigen.
+	\end{lhp}
+	
+	\begin{lhp}{lb}{LB}{beschr:anwendungsbereich}
+		\item [Name:] Anwendungsbereich
+		\item [Beschreibung:] Das System ist ausschließlich für den privaten Bereich ausgelegt.
+		\item [Motivation:] Es sind keine Lizenzen vorhanden, siehe \ref{fa:recht}. 
+		\item [Erfüllungskriterium:] Keine Veröffentlichung des Projektes.
+	\end{lhp}
+	
+		
+	\begin{lhp}{lb}{LB}{beschr:implsprache}
+		\item [Name:] Implementierungssprache
+		\item [Beschreibung:] Für die Implementierung ist ausschließlich Java 8 oder höher zu verwenden.
+		\item [Motivation:] Das optimiert die Betreuung vom SEP und koordiniert die Mitarbeit.
+		\item [Erfüllungskriterium:] Alle Beteiligten installieren eine passende Version.
+	\end{lhp}
+	
+	\begin{lhp}{lb}{LB}{beschr:gui}
+		\item [Name:] GUI-Framework
+		\item [Beschreibung:] Die GUI ist mit JavaFX zu realisieren.
+		\item [Motivation:] Das optimiert die Betreuung vom SEP und koordiniert die Mitarbeit.
+		\item [Erfüllungskriterium:] Alle Beteiligten informieren sich und kümmern sich um das Setup.
+	\end{lhp}
+	
+	\begin{lhp}{lb}{LB}{beschr:gitlab}
+		\item [Name:] Gitlab
+		\item [Beschreibung:] Für die Entwicklung ist das vorgegebene GitLab-Repository zu verwenden.
+		\item [Motivation:] Das optimiert die Betreuung vom SEP und koordiniert die Mitarbeit.
+		\item [Erfüllungskriterium:] Alle Beteiligten Registrieren sich und lassen sich vom Betreuer Zugang zum Repository geben.
+	\end{lhp}
+	
+	
+\end{description}
+
+\section{Glossar}
+
+\begin{center}
+		\rowcolors{2}{Gray!15}{White}
+		\begin{longtable}{p{0.25\textwidth} p{0.25\textwidth} p{0.4\textwidth}}
+			\textbf{Deutsch} & \textbf{Englisch} & \textbf{Bedeutung} \\
+			\hline \hline \endhead
+			Beispiele & Examples & Beispiele aus dem SEP letzter Jahren, welche angepasst werden müssen.\\                      
+			Bot & bot & Spieler, dessen Spielaktionen vom Computer entschieden und durchgeführt werden\\
+			Kekse & Cookies & Offiziell keine gültige Maßnahme zur Bestechung der HiWis\\          
+ 			Lobby & lobby & Virtueller Raum zum Betreten eines Spielraums\\	
+			Spiel (Regelwerk) & game & LAMA \\
+			Spieler & player & Teilnehmer am Spielgeschehen\\
+			Spielraum & game room & Virtueller Raum, in dem ein Spiel stattfindet.\\
+			Zug & turn & Zustand in dem ein Spieler eine Spielaktion ausführen muss. Nachdem ein Spieler seinen Zug beendet hat, kommt der nächste Spieler im Uhrzeigersinn an die Reihe.\\
+			Durchgang & run & Ein Spiel besteht aus mehreren Durchgängen. Ein Durchgang ist beendet, wenn ein Spieler alle Karten abgelegt hat, oder wenn all Spieler ausgestiegen sind. Der Spieler, der den letzten Durchgang beendet hat beginnt den nächsten, insofern das Spiel noch nicht beendet ist.\\
+			Spieleranzahl& number of player & Anzahl an Spieler im Spielraum.Das Spiel ist mit 2-6 Spielern spielbar.\\
+			Chat & chat & Fenster für die Kommunikation zwischen Spielern im Spielraum\\
+			Bestenliste & leaderboard & Liste von Spielern mit den aktuell meisten Siegen und der Anzahl der Siege dieser.\\
+			Spielraum erstellen & create a game-room & neuer Spielraum wird auf dem Fenster erstellt.\\
+			Spielraum Ändern & change game-room  & Fenster zur Änderung des Raums ,Einstellung der Spieleranzahl ,Hintergrundsfarbe.\\
+			Ergebnis & result & Fenster für Darstellung von Ergebnissen.\\
+			Spielraum löschen & delete game-room & Fenster zur Löschung des Spielraums durch Kennwort.\\
+			Registrieren & register & Fenster zur Registrierung.\\
+			verlassen & quit & Fenster zum Verlassen des Spieles.\\
+			Abmelden & log out & Fenster zur Abmeldung.\\
+			Anmelden & log-in & Fenster zur Anmeldung.\\
+			spieler löschen & delete a player & Fenster zur Löschung des Spielerkontos.\\
+			Chips & chips & Chips stellen kassierte Minuspunkte der Spieler dar. Es gibt schwarze und weiße Chips. Weiße Chips symbolisieren einen Minuspunkt, schwarze Chips 10. \\
+			Minuspunkte & negative points & Minuspunkte entscheiden über das Ende des Spiels und den Sieger. Das Spiel endet, wenn ein Spieler 40 Minuspunkte gesammelt hat. Diejenigen Spieler mit der geringsten Anzahl an Minuspunkten gewinnen das spiel (Es kann mehrere Gewinner geben). \\
+		    Stapel & deck & Übereinander-gestapelten Karten des Spiels. Ein voller Stapel besteht aus 8 Lama-Karten und 8 Karten für jeden der Kartenwerte 1-6. \\
+		    Lama-Karte / Lama & lama-card / lama & Spezielle Spielkarte. Kann auf Karten des Wertes 6, oder auf ein anderes Lama gelegt werden. Auf ein Lama kann eine Karte des Wertes 1, oder ein anderes Lama gelegt werden. Bei der Abrechnung zählen Lama-Karten für 10 Minuspunkte. \\
+		    Kartenwert & number of the card & Ziffer, die auf der Karte zu sehen ist. Bei der Lama-Karte beträgt der Kartenwert 10\\
+		    Host & host & Spieler, der einen Raum erstellt hat und diesen aktuell verwaltet. \\
+		\end{longtable}
+\end{center}
+
+\section{Relevante Fakten und Annahmen}
+
+Wichtige bekannte Fakten und getroffene Annahmen, die sich auf das Projekt direkt oder indirekt beziehen und dadruch auf die zukünftige Implementierungsentscheidungen Effekt haben können.
+
+\newcounter{fa}\setcounter{fa}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{fa}{FA}{fa:fortentwicklung}
+		\item [Name:] Keine Fortentwicklung der App nach dem SEP.
+		\item [Beschreibung:] Nach Ende des SEP wird das Projekt nicht weiterentwickelt.
+		\item [Motivation:] Das Entwicklungsteam hat keine Lust darauf.
+	\end{lhp}
+	
+	\begin{lhp}{fa}{FA}{fa:recht}
+		\item [Name:] Keine Lizenzen für Spielartefakte.
+		\item [Beschreibung:] Weder die TU Kaiserslautern noch das Spielwerk + die Freizeit GmbH gewahren dem Entwicklungsteam die Rechte für die Spielartefakte.
+		\item [Motivation:] Rechtliche Vorsorge.
+	\end{lhp}
+	
+	\begin{lhp}{fa}{FA}{fa:recht-vergangenheit}
+		\item [Name:] Keine bekannte Nachteile von Verwendung von Spielartefakten.
+		\item [Beschreibung:] Es ist nicht bekannt, dass die SEP-Teilnehmer der letzten Jahre irgendwelche rechtlichen Probleme dadurch gehabt haben, dass sie die Spielartefakten vom Spielwerk + der Freizeit GmbH im Rahmen des SEP eingesetzt haben.
+		\item [Motivation:] Rechtliche Vorsorge.
+	\end{lhp}
+	
+	
+\end{description}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Common/src/Common.iml" filepath="$PROJECT_DIR$/../Common/src/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LamaClient.iml" filepath="$PROJECT_DIR$/LamaClient.iml" />
+    </modules>
+  </component>
+</project>

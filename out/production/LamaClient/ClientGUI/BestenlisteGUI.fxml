@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientGUI.BestenlisteGUI">
+   <center>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="list" layoutY="-1.0" prefHeight="403.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="Rang" prefWidth="110.6666259765625" text="Rang" />
+                  <TableColumn fx:id="Benutzername" minWidth="0.0" prefWidth="260.6666259765625" text="Benutzername" />
+                  <TableColumn fx:id="Anzahl_Spiele_gewonnen" prefWidth="228.66668701171875" text="Anzahl_Spiele_gewonnen" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Label fx:id="Bestenliste" prefHeight="42.0" prefWidth="599.0" text="                                   Bestenliste            " BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

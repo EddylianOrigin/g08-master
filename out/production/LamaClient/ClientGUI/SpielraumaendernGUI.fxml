@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="330.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientGUI.SpielraumaendernGUI">
+   <children>
+      <Label layoutX="176.0" layoutY="51.0" prefHeight="34.0" prefWidth="230.0" text="Spielraum ändern">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="127.0" prefHeight="17.0" prefWidth="113.0" text="Raumname ändern" />
+      <Label layoutX="65.0" layoutY="183.0" text="Spieleranzahl ändern" />
+      <TextField id="raumnameFeld" layoutX="300.0" layoutY="123.0" />
+      <TextField id="spieleranzahlFeld" layoutX="300.0" layoutY="179.0" />
+      <Button layoutX="65.0" layoutY="255.0" mnemonicParsing="false" text="Abbrechnen" />
+      <Button layoutX="380.0" layoutY="255.0" mnemonicParsing="false" text="Bestätigen" />
+   </children>
+</AnchorPane>

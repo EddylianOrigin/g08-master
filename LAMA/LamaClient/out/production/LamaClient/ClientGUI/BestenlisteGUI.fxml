@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientGUI.BestenlisteGUI">
+    <center>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <TableView fx:id="Table" layoutX="97.0" prefHeight="400.0" prefWidth="504.0">
+                    <columns>
+                        <TableColumn fx:id="Benutzername" editable="false" prefWidth="281.33336639404297" sortType="DESCENDING" text="Benutzername" />
+                        <TableColumn fx:id="Anzahl_Spiele_gewonnen" editable="false" prefWidth="219.33340454101562" sortType="DESCENDING" text="Anzahl_Spiele_gewonnen" />
+                    </columns>
+                </TableView>
+                <ListView fx:id="listview" layoutX="-1.0" layoutY="25.0" prefHeight="376.0" prefWidth="98.0" />
+                <Label layoutY="-1.0" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #ebdc0c;" text="         Rang" textAlignment="CENTER" textFill="#1a0160">
+                    <font>
+                        <Font name="Britannic Bold" size="12.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Label>
+            </children>
+        </Pane>
+    </center>
+    <top>
+        <Label fx:id="Bestenliste" prefHeight="42.0" prefWidth="599.0" text="                                   Bestenliste            " BorderPane.alignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </top>
+</BorderPane>

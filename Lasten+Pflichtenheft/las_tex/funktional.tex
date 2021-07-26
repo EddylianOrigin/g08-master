@@ -1,0 +1,49 @@
+\chapter{Funktionale Anforderungen}
+
+%\section{Systemkontext}
+
+\section{Systemfunktionen}
+
+\newcounter{pfc}\setcounter{pfc}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{pfc}{LF}{funk:spielverw}
+		\item [Name:] Spielverwaltung
+		\item [Beschreibung:] Das System verwaltet das von mehreren Spielern geteiltes Spiel in einem Spielraum. Das Spiel erfolgt nach den Spielregeln.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:zugriff}
+		\item [Name:] Zugriffsverwaltung
+		\item [Beschreibung:] Das System verwaltet den Zugang zum Spiel anhand Benutzerdaten. Spieler können sich registrieren, anmelden, abmelden sowie ihre Kontos löschen.
+	\end{lhp}
+
+	\begin{lhp}{pfc}{LF}{funk:spielraum}
+		\item [Name:] Verwaltung der Spielräume
+		\item [Beschreibung:] Das System verwaltet die Erstellung, Änderung und Löschung der Spielräume.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:bestenliste}
+		\item [Name:] Bestenliste
+		\item [Beschreibung:] Die Anzahl der gewonnen Spiele aller Spieler anzeigen.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:bots}
+		\item [Name:] Intelligente Bots
+		\item [Beschreibung:] Das System unterstützt Bots. Diese müssen nicht selbstlernend sein (siehe \ref{beschr:lehrbots}), aber dennoch eine gewinnbringende Strategie verfolgen. Es gibt einen einfacheren und einen komplexeren und besseren Bot.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:chat}
+		\item [Name:] Chat
+		\item [Beschreibung:] Das System stellt sowohl in der Lobby als auch in den Spielräumen selbst einen Chat zur verfügung, in dem sich die Nutzer austauschen können.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:regel}
+		\item [Name:] Spielregeln
+		\item [Beschreibung:] Das System stellt die Spielregeln von LAMA zum Nachlesen zur verfügung.
+	\end{lhp}
+
+
+\end{description}
+
+

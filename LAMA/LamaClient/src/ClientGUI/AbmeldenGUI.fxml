@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="240.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ClientGUI.AbmeldenGUI">
+    <children>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0"/>
+        <Button layoutX="33.0" layoutY="150.0" mnemonicParsing="false" onAction="#abbrechnenBtn" prefHeight="33.0"
+                prefWidth="107.0" text="Abbrechen"/>
+        <Label layoutX="100.0" layoutY="40.0" prefHeight="78.0" prefWidth="163.0" text="Abmelden">
+            <font>
+                <Font size="34.0"/>
+            </font>
+        </Label>
+        <Button layoutX="230.0" layoutY="154.0" mnemonicParsing="false" onAction="#bestätigenBtn" prefHeight="33.0"
+                prefWidth="99.0" text="Bestätigen"/>
+        <Label layoutX="64.0" layoutY="110.0" prefHeight="17.0" prefWidth="260.0"
+               text="Sind Sie sicher, dass Sie abmelden möchten?"/>
+    </children>
+</AnchorPane>

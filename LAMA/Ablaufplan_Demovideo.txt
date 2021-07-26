@@ -1,0 +1,45 @@
+Ablaufplan der Präsentation:
+
+1. Präsentation des Spiels:
+- Starte Server und 2 Clients
+- Registriere ein neues Benutzerkonto in einem Fenster
+- Schaue Bestenliste an
+- Schaue dort die Benutzerliste an und schließe sie wieder
+- Melde im anderen Fenster ein Benutzerkonto an, zeige Fehlermeldungen (bereitsangemeldet, usw.)
+- Schaue erneut auf Benutzerlisten in beiden Fenstern
+- Beide Nutzer schreiben in den Chat
+- Öffne Spielregel Fenster und schließe dies wieder
+- Ein Nutzer löscht sein Benutzerkonto
+- Schaue Bestenliste an
+- Schaue erneut auf Benuzertliste und Bestenliste im anderen Fenster
+- Nutzer loggt sich wieder mit anderem Konte ein
+- Ein Nutzer erstellt einen neuen Spielraum (Raumgröße 5)
+- Bots werden ins Spiel eingefügt (2*schwer, 2*normal)
+- Anderer Nutzer versucht beizutretet -> Exception
+- Spielraumhost Ändert den Raum -> Raumgröße 6
+- Anderer Nutzer tritt dem Spielraum bei
+- Beide Spieler schreben in den Chat
+- Bestenliste anschauen
+- Bots entfernen
+- Beigetretener Spieler verlässte den Raum und tritt diesem wieder bei
+- Host verlässt den Raum
+- Anderer Spieler erstellt einen Raum (Raumgröße 4)
+- Es werden wieder Bots eingefügt (1*normal 1 mal schwer)
+- Zweiter Spieler tritt dem Raum bei
+- Spiel wird gestartet
+- Spiele Spiel, zeige alle möglichen Züge
+- Nach dem Spiel, schaue Bestenliste an
+- Entferne Bots, ändere Raumgröße auf 2 und starte erneut. 
+- Falls die ChipAbgeben-Aktion eines Nutzers noch nicht gezeigt wurde, versuche ein enstprechendes Szenario vorzuführen.
+- Zeige Bestenliste
+- Host löscht den Raum
+- Ein Nutzer meldet sich ab
+- Anderer Nutzer zeigt Benutzerliste ein weiteres mal
+- Anderer Nutzer meldet sich auch ab
+
+
+2. Ausführung der Unit Tests
+
+3. Dokumentation zeigen
+
+4. Datenbank zeigen

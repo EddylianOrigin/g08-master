@@ -1,0 +1,378 @@
+\chapter{Systemtestfälle}
+
+Hier sollen verschiedene Szenarien beschrieben werden, mithilfe deren Sie später Systemtests ausführen und die erwarteten Ergebnisse darstellen.
+
+\newcounter{tf}\setcounter{tf}{10} 
+80
+
+
+\begin{description}[leftmargin=5em, style=sameline]
+
+\begin{lhp}{tf}{TF}{tests:anmelden}
+	\item [Name:] Spieler anmelden.
+	\item [Motivation:] Testet, ob die Anmeldung in das System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\ $\implies$ Spieler wird in die Lobby bewegt.
+			\item \textit{Benutzername ist registriert, Passwort ist falsch} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzername ist nicht registriert} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:anmelden}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:abmelden}
+	\item [Name:] Spieler abmelden.
+	\item [Motivation:] Testet, ob die Abmeldung in das System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler betätigt den Bestätigen Button.} \\ $\implies$ Spieler wird in das Anmelden/Registrieren Interface bewegt.
+			\item \textit{Spieler betätigt den Abbrechen Button.} \\ $\implies$ Spieler wird in das Lobby Interface bewegt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:abmelden}
+\end{lhp}
+
+{
+\begin{lhp}{tf}{TF}{tests:registrieren}
+	\item [Name:] Spieler registrieren.
+	\item [Motivation:] Testet, ob die Registrierung in das System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+		    \item \textit{Benutzername und Passwörter werden eingegeben. Passwörter stimmen überein.} \\ $\implies$ Spieler wird angemeldet und in die Lobby bewegt.
+			\item \textit{Benutzername ist schon vorhanden} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Passwörter stimmen nicht überein} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzer betätigt den Abbrechen Button.} \\ $\implies$ Benutzer wird in das Vorraum Interface bewegt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:registrieren}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:löschen}
+	\item [Name:] Spieler löschen.
+	\item [Motivation:] Testet, ob das Löschen eines Spielers im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\ $\implies$ Spieler wird gelöscht.
+			\item \textit{Benutzername oder Passwort ist falsch} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzer betätigt den abbrechen Knopf} \\ $\implies$ Spieler wird in die Lobby bewegt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:löschen}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:ablegen}
+	\item [Name:] Karte ablegen.
+	\item [Motivation:] Testet, ob die Ablegung einer Karte in das System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler betätigt den Ablegen Knopf und wählt eine nach Regelwerk korrekte Karte (siehe \ref{uc:ablegen}) zum Ablegen} \\ $\implies$ Die gewählte Karte wird aus dem Hand gelöscht und in dem Ablagestapel hinzugefügt.
+			\item \textit{Spieler betätigt den Ablegen Knopf und wählt eine nicht nach Regelwerk korrekte Karte (siehe \ref{uc:ablegen})}
+			$\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:ablegen}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:aufnehmen}
+	\item [Name:] Karte aufnehmen.
+	\item [Motivation:] Testet, ob die Aufnahme einer Karte im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler betätigt den Aufnehmen Knopf}\\ $\implies$ Eine Karte wird auf dem Hand hinzugefügt und aus dem Nachziehstapel gelöscht.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:aufnehmen}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:aussteigen}
+	\item [Name:] Aussteigen.
+	\item [Motivation:] Testet, ob das Aussteigen des Spielers im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler betätigt den Aussteigen Knopf } \\
+			$\implies$ Karten auf der Hand des Spielers werden verdeckt auf den "Tisch" gelegt und der Spieler darf bis am Ende des Durchgangs nicht mehr ablegen, aufnehmen oder aussteigen. %besser erklären
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:aussteigen}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:srbeitreten}
+	\item [Name:] Spielraum beitreten.
+	\item [Motivation:] Testet, ob das Betreten eines Spielraums korrekt funktioniert und ob die Reihenfolge der Belegung der Plätze in diesem richtig ist.
+	
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+		\begin{comment}
+		    \item \textit{Spieler klickt den $"$Spielraum beitreten$"$ Button und der Raum ist noch nicht voll} \\ $\implies$ Spieler wird in den Spielraum bewegt.
+		 \end{comment}
+			\item \textit{Spieler klickt den $"$Spielraum beitreten$"$ Button, der Raum beinhaltet aktuell einen Spieler und der Raum ist noch nicht voll} \\ $\implies$ Spieler wird in den Spielraum bewegt und belegt nun den oberen Platz.
+			\item \textit{Spieler klickt den $"$Spielraum beitreten$"$ Button, der Raum beinhaltet aktuell zwei Spieler und der Raum ist noch nicht voll} \\ $\implies$ Spieler wird in den Spielraum bewegt und belegt nun den Platz oben-links.
+			\item \textit{Spieler klickt den $"$Spielraum beitreten$"$ Button, der Raum beinhaltet aktuell drei Spieler und der Raum ist noch nicht voll} \\ $\implies$ Spieler wird in den Spielraum bewegt und belegt nun den Platz oben-rechts.
+			\item \textit{Spieler klickt den $"$Spielraum beitreten$"$ Button, der Raum beinhaltet aktuell vier Spieler und der Raum ist noch nicht voll} \\ $\implies$ Spieler wird in den Spielraum bewegt und belegt nun den Platz unten-links.
+			\item \textit{Spieler klickt den $"$Spielraum beitreten$"$ Button, der Raum beinhaltet aktuell fünf Spieler und der Raum ist noch nicht voll} \\ $\implies$ Spieler wird in den Spielraum bewegt und belegt nun den Platz unten-rechts.
+			\item \textit{Spielraum ist voll (keine freie Spielplätze)} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:srbeitreten}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:srverlassen}
+	\item [Name:] Spielraum verlassen.
+	\item [Motivation:] Testet, ob das Verlassen eines Spielraums im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler und klickt den $"Verlassen"$ Button und bestätigt darufhin} \\ $\implies$ Spieler wird in die Lobby bewegt, die Anzahl der Spieler im Raum wird um eins reduziert und des Slot des Spieler wir wieder freigegeben.
+		
+			\item \textit{Spieler klickt den $"Verlassen"$ Button und bricht die Aktion daraufhin ab} \\ $\implies$ Spieler bleibt im Spielraum.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:srverlassen}
+\end{lhp}
+}
+
+
+
+{
+\begin{lhp}{tf}{TF}{tests:srerstellen}
+	\item [Name:] Spielraum erstellen.
+	\item [Motivation:] Testet, ob die Erstellung eines Spielraums im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Raumdaten sind eingegeben} \\ $\implies$ Spieler wird im Spielraum bewegt.
+			\item \textit{Raumdaten sind nicht vollständig oder fehlerhaft eingegeben} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Raumname ist bereits vorhanden} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzer betätigt den Abbrechen Button.} \\ $\implies$ Benutzer wird in die Lobby bewegt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:srerstellen}
+\end{lhp}
+}
+
+{
+\begin{lhp}{tf}{TF}{tests:starten}
+	\item [Name:] Spiel starten.
+	\item [Motivation:] Testet, ob das Starten einer Spielrunde im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spiel starten Button wird geklickt} \\ $\implies$ Eine LAMA Spielrunde wird gestartet. Der Kartenstapel wird erstellt, gemischt und die Karten werden an die Spieler verteilt. Der erste Durchgang beginnt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:starten}
+\end{lhp}
+}
+
+
+{
+\begin{lhp}{tf}{TF}{tests:srändern}
+	\item [Name:] Spielraum ändern.
+	\item [Motivation:] Testet, ob die Änderung eines Spielraums im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+
+            \item \textit{Host bestätigt die Änderung und der Raumname ist noch nicht bereits durch einen anderen Raum vergeben und die eingestellte maximale Spieleranzahl unterschreitet nicht die Anzahl der sich aktuell im Raum befindeten Spieler.} \\ $\implies$ der Raum wird geändert.
+			\item \textit{Host bestätigt die Änderung und der Raumname ist bereits durch einen anderen Raum vergeben, oder die eingestellte maximale Spieleranzahl unterschreitet die Anzahl der sich aktuell im Raum befindeten Spieler.} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Host betätigt den Abbrechen Button.} \\ $\implies$ der Raum wird nicht geändert.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:srändern}
+\end{lhp}
+}
+
+
+\begin{lhp}{tf}{TF}{tests:srlöschen}
+	\item [Name:] Spielraum löschen.
+	\item [Motivation:] Testet, ob die Löschung eines Spielraums im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Host betätigt den Abbrechen Knopf} \\ $\implies$ Spieler wird in den Spielraum zurück bewegt.
+			\item \textit{Host betätigt den Bestätigen Knopf} \\ $\implies$ Spielraum wird gelöscht, die Spieler darin werden zurück in die Lobby bewegt.
+		\end{enumerate}
+    \item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:srlöschen}
+\end{lhp}
+
+
+
+\begin{lhp}{tf}{TF}{tests:bestenliste}
+	\item [Name:] Bestenliste anzeigen.
+	\item [Motivation:] Testet, ob die Bestenliste im System korrekt funktioniert .
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler befindet sich in der Lobby} \\ $\implies$ Bestenliste wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:bestenliste}
+	\item [Relevante Use Cases:] \ref{uc:bestenliste}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:bots}
+	\item [Name:] Bot hinzufügen.
+	\item [Motivation:] Testet, ob ein Bot dem Spielraum hinzugefügt werden kann.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Host klickt den $"$Bot hinzufügen$"$ Button} \\ $\implies$ Bot wird im Spielraum hinzugefügt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:bots}
+	\item [Relevante Use Cases:] \ref{uc:bots}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:botsentfernen}
+	\item [Name:] Bot entfernen.
+	\item [Motivation:] Testet, ob ein Bot aus dem Spielraum entfernt werden kann.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Host klickt den $"$Bot entfernen$"$ Button} \\ $\implies$ Bot wird aus dem Spielraum entfernt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:bots}
+	\item [Relevante Use Cases:] \ref{uc:botsentfernen}
+\end{lhp}
+
+
+\begin{lhp}{tf}{TF}{tests:chat}
+	\item [Name:] Chat.
+	\item [Motivation:] Testet, ob der Chat im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler schickt eine Nachricht} \\ $\implies$ Die Nachricht ist im Chat-Fenster sichtbar und kann von allen Spielern in der Lobby gelesen werden.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:chat}
+	\item [Relevante Use Cases:] \ref{uc:chat}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:srchat}
+	\item [Name:] Raum Chat.
+	\item [Motivation:] Testet, ob der Chat des Spielraums im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler schickt eine Nachricht} \\ $\implies$ Die Nachricht ist im Chat-Fenster sichtbar und kann von allen Spielern im Spielraum gelesen werden.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:chat}
+	\item [Relevante Use Cases:] \ref{uc:srchat}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:chipskassieren}
+	\item [Name:] Chips kassieren.
+	\item [Motivation:] Testet, ob der Gesamtwert bzw. die Art der kassierten Chips korrekt ist.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler befindet sich im Spiel, hat noch verbleibende Karten und der Durchgang ist beendet} \\ $\implies$ Spieler bekommt Chips entsprechend seiner Minuspunkte.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:chipskassieren}
+\end{lhp}
+
+
+
+\begin{lhp}{tf}{TF}{tests:chipsablegen}
+	\item [Name:] Chips abgeben.
+	\item [Motivation:] Testet, ob das Abgeben der Chips korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler befindet sich im Spiel, hat keine verbleibenden Karten, hat bereits 1er, als auch 10er Chips gesammelt und der Durchgang ist beendet} \\ $\implies$ Spieler kann sich entscheiden, ob er einen 1er oder einen 10er Chip abgibt.
+			\item \textit{Spieler befindet sich im Spiel, hat keine verbleibenden Karten, hat bisher nur 1er Chips gesammelt und der Durchgang ist beendet} \\ $\implies$ Spieler gibt einen 1er Chip ab.
+			\item \textit{Spieler befindet sich im Spiel, hat keine verbleibenden Karten, hat bisher nur 10er Chips gesammelt und der Durchgang ist beendet} \\ $\implies$ Spieler gibt einen 10er Chip ab.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:chipsabgeben}
+\end{lhp}
+
+
+\begin{lhp}{tf}{TF}{tests:benutzerliste}
+	\item [Name:] Benutzerliste anzeigen.
+	\item [Motivation:] Testet, ob Liste der angemeldeten Nutzer angezeigt wird.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler klickt auf das entsprechende Icon in der Lobby} \\ $\implies$ Die Benutzerliste wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:benutzerliste}
+\end{lhp}
+
+
+\begin{lhp}{tf}{TF}{tests:deck}
+	\item [Name:] Kartenstapel erstellen.
+	\item [Motivation:] Testet, ob das Erstellen eines Kartenstapels im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{ Neuer Durchgang beginnt}  \\ $\implies$ Ein Stapel wird erstellt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:deck}
+\end{lhp}
+
+
+
+\begin{lhp}{tf}{TF}{tests:mischen}
+	\item [Name:] Karten mischen.
+	\item [Motivation:] Testet, ob das Mischen des Kartenstapels im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spiel wird gestartet und Kartenstapel wird erstellt} \\ $\implies$ Der Kartenstapel wird gemischt. Die Positionen der Karten im Stapel sind randomisiert.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:mischen}
+\end{lhp}
+
+
+
+\begin{lhp}{tf}{TF}{tests:verteilen}
+	\item [Name:] Karten verteilen.
+	\item [Motivation:] Testet, ob das Verteilen der Spielkarten im System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Kartenstapel wurde erstellt und gemischt} \\ $\implies$ Das System verteilt jeder Spieler 6 Spielkarten.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:verteilen}
+\end{lhp}
+
+
+
+\begin{lhp}{tf}{TF}{tests:raumbestenliste}
+	\item [Name:] Raum-lokale Bestenliste.
+	\item [Motivation:] Testet ob das Anzeigen der Bestenliste eines Spielraums funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler klickt auf den "Bestenliste" Knopf} \\ $\implies$ Das Fenster Bestenliste öffnet sich.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:raumbestenliste}
+\end{lhp}
+\begin{comment}
+\begin{lhp}{tf}{TF}{tests:spielraum_verbindung}
+	\item [Name:] \textcolor{green}{Verbindungsabbruch oder verlassen des Spiels während des Spiels}
+	\item [Motivation:] \textcolor{green}{Testet ob das Spiel nach dem Verlassen oder einem Verbindungsabbruch eines Spielers wie gewollt weitergeht.}
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler verlässt das Spiel, oder hat einen Verbindungsabbruch} \\ $\implies$ Spieler wird aus dem Spiel entfernt. Seine verbleibenden Karten werden auf den Ablagestapel gelegt und das Spiel geht weiter.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:spielraum}
+\end{lhp}
+\end{comment}
+
+\begin{lhp}{tf}{TF}{tests:regeln}
+	\item [Name:] Spielregeln anzeigen
+	\item [Motivation:] Textet ob, das Öffnen des Spielregel Interface korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Benutzer drückt auf den $"$Spielregeln$"$ Knopf} \\ $\implies$ Das Spielregel Interface öffnet sich und die Spielregeln werden angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:regel}
+	\item [Relevante Use Cases:] \ref{uc:regeln}
+\end{lhp}
+
+
+\end{description}

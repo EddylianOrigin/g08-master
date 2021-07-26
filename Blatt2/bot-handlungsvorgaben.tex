@@ -1,0 +1,38 @@
+
+
+\chapter{Handlungsvorgaben der Computerspieler}
+
+\section{Bot schwer}
+\textbf{Aktionen außerhalb des Durchgangs:} \\ \\
+\textbf{chips abgeben:} Der Bot gibt immer 10er Chips ab, sofern es ihm möglich ist. \\
+\\ \\
+\textbf{Aktionen während des Durchgangs:} \\ \\
+\textbf{Karte ablegen:} Der Bot legt immer eine Karte ab, sofern es ihm möglich ist. \\
+\begin{itemize}
+	\item Fall 1: es liegt keine Lama-Karte auf dem Ablagestapel:
+	\begin{itemize}
+		\item Falls er mehrere Möglichkeiten hat, legt er zuerst eine der Karten ab, von denen er eine geringere Anzahl auf der Hand hat.
+		\item Falls er dann immer noch mehrere Möglichkeiten hat, legt er zuerst die Karte mit den höchsten Kartenwert ab.
+		\end{itemize}
+	\item Fall 2: es liegt eine Lama-Karte auf dem Ablagestapel:
+	\begin{itemize}
+	    \item Falls er mehrere Möglichkeiten hat und er mindestens 2 Lama-Karten mehr auf der Hand hat als Karten des Kartenwertes 1, dann legt er eine Karte des Kartenwertes 1 ab.
+		\item Falls er mehrere Möglichkeiten und er nicht mindestens 2 Lama-Karten mehr auf der Hand hat als Karten des Kartenwertes 1, dann legt er eine Lama-Karte ab.
+		\end{itemize}
+\end{itemize}
+\textbf{Aussteigen:} Der Bot steigt aus dem Durchgang aus, wenn er keine Karte ablegen kann, er durch diese Aktion nicht nach dem Durchgang 40 Minuspunkte hätte und ein anderer Spieler nur noch eine Karte auf der Hand hat.\\
+\textbf{Nachziehen:} Der Bot zieht Karten nach, wenn er keine der anderen Aktionen wählt.
+
+\section{Bot normal}
+
+%temporär alles reinkopiert:
+\textbf{Aktionen außerhalb des Durchgangs:} \\ \\
+\textbf{Chips abgeben:} Der Bot gibt mit einer Wahrscheinlichkeit von 80\% 10er Chips ab, sofern es ihm möglich ist. Andernfalls gibt er einen 1er Chip ab. \\
+\\ \\
+\textbf{Aktionen während des Durchgangs:} \\ \\
+\textbf{Karte ablegen:} Der Bot legt, sofern es ihm möglich ist, mit eine Wahrscheinlichkeit von 80\% eine Karte ab. \\
+Der Bot legt dabei die Karte mit dem höchsten Kartenwert ab. 
+\\ \\
+\textbf{Aussteigen:} Der Bot steigt aus dem Durchgang aus, wenn er keine Karte ablegen kann, er durch diese Aktion nicht nach dem Durchgang 40 Minuspunkte hätte und ein anderer Spieler nur noch eine Karte auf der Hand hat.\\
+\textbf{Nachziehen:} Der Bot zieht Karten nach, wenn er keine der anderen Aktionen wählt.
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LAMA/Common/Common.iml" filepath="$PROJECT_DIR$/LAMA/Common/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAMA/LamaClient/LamaClient.iml" filepath="$PROJECT_DIR$/LAMA/LamaClient/LamaClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAMA/LamaServer/LamaServer.iml" filepath="$PROJECT_DIR$/LAMA/LamaServer/LamaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAMA/LamaServer/SpielRaumVerwaltung.iml" filepath="$PROJECT_DIR$/LAMA/LamaServer/SpielRaumVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAMA/LamaServer/SpielerRaumVerwaltung.iml" filepath="$PROJECT_DIR$/LAMA/LamaServer/SpielerRaumVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/g08-LAMA.iml" filepath="$PROJECT_DIR$/.idea/g08-LAMA.iml" />
+    </modules>
+  </component>
+</project>
